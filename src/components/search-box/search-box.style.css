@@ -1,0 +1,18 @@
+.root {
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto !important;
+    text-align: center !important;
+}
+
+.input {
+    /*marginLeft: theme.spacing(1);*/
+    flex: 1;
+    padding: 10px;
+}
+
+.icon-button {
+    padding: 10%;
+}

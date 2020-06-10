@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(9,16,20);
+  background: radial-gradient(circle, rgba(9,16,20,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.cp-text {
+  font-family: 'Bigelow Rules';
+  color: #FF6347;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 2em;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
 }
