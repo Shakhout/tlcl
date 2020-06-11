@@ -1,15 +1,17 @@
 .App {
   text-align: center;
 }
+
 h1 {
   font-family: 'Bigelow Rules';
   font-size: 72px;
   font-weight: normal;
-  /*color: #0ccac4;*/
   color: #00ff00;
+  margin-top: 2%;
+  padding: 20px;
 }
 
 .search-box {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 5%;
 }
