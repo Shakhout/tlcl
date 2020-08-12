@@ -15,16 +15,6 @@ class CardComponent extends Component {
         }
     }
 
-    _getOptionsContainer(){
-        return (
-            <ul className="options">
-                {this.props.command.options.map((option, i) => (
-                    <li key={i} className="option">{option}</li>
-                ))}
-            </ul>
-        );
-    }
-
     _onModalClose(e) {
         this.setState({openModal: false});
     }
@@ -39,9 +29,6 @@ class CardComponent extends Component {
                 <div className='card-container'>
                     <h2 className="name"> {this.props.command.name.toUpperCase()} </h2>
                     <p className="synopsis"> {this.props.command.synopsis} </p>
-                    {this.props.command.options.length > 0 &&
-                    this._getOptionsContainer()
-                    }
                     <p className="details"> {this.props.command.details} </p>
                     <ModalComponent command={this.props.command} open={this.state.openModal} onClose={e => this._onModalClose(e)} />
                     <Button variant="outlined" color="primary" onClick={e => this._onDetailsButtonClick()}>

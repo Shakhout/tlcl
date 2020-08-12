@@ -28,12 +28,13 @@
 }
 
 .options {
-    list-style-type: square;
+    list-style-type: disc;
 }
 
 .option {
     text-align: left;
-    color: #6495ED;
+    color: gray;
+    font-weight: bolder;
 }
 
 .details {

@@ -6,21 +6,36 @@ import Modal from '@material-ui/core/Modal';
 import './modal.style.css';
 
 class ModalComponent extends Component {
+    _getOptionsContainer(){
+        return (
+            <ul className="options">
+                {this.props.command.options.map((option, i) => (
+                    <li key={i} className="option">{option}</li>
+                ))}
+            </ul>
+        );
+    }
+
     _getBody() {
+        const command = this.props.command;
+
         return (
             <div className="modal-container">
                 <div className="card ad-card-medium">
                     <div className="card-header">
-                        <h2>{this.props.command.name.toUpperCase()}
+                        <h2>{command.name.toUpperCase()}
                         <button type="button" className="close" onClick={e => this.props.onClose(e)}>
                             <span aria-hidden="true">&times;</span>
                         </button>
                         </h2>
                     </div>
                     <div className="card-body card-padding">
+                        <h4><i className="fa fa-info-circle"></i>&nbsp;{command.synopsis}</h4>
+                        {this.props.command.options.length > 0 &&
+                            this._getOptionsContainer()
+                        }
                         <p className="ad-text-with-icon text-dark">
-                            <i className="fa fa-info-circle"></i>&nbsp;
-                            <span>{this.props.command.details}</span>
+                            <span>{command.details}</span>
                         </p>
                     </div>
                 </div>
